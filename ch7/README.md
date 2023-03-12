@@ -1,5 +1,18 @@
 # Chapter 7 of Blockchain Tech Notes, by P. G. Bradford
 
+
+#
+# Install Qemu on Ubuntu
+#
+#
+##
+##
+###
+## It is Not necessary to install these exercises on MacOS or Windows 10/11.  
+##   Getting libvirt on MacOS or Windows 10/11 is Not discussed in our notes
+## --------------
+### If you want to install QEMU on MacOS, please use QEMU-command-MacOS.txt
+### If you want to install QEMU on Windows 10/11, please use QEMU-command-Windows.txt
 #
 ##
 ## Mining on a virtual Raspberry Pi
