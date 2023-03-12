@@ -8,8 +8,8 @@
 ##
 ##
 ###
-## It is Not necessary to install these exercises on MacOS or Windows 10/11.  
-##   Getting libvirt on MacOS or Windows 10/11 is Not discussed in our notes
+## It is not necessary to install these exercises on MacOS or Windows 10/11.  
+##   Since we do not install libvirt on MacOS or Windows 10/11 
 ## --------------
 ### If you want to install QEMU on MacOS, please use QEMU-command-MacOS.txt
 ### If you want to install QEMU on Windows 10/11, please use QEMU-command-Windows.txt
