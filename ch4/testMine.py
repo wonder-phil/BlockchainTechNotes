@@ -5,4 +5,4 @@ b=Block("empty","genesis block")
 
 difficulty = int(sys.argv[1])
 newBlock=b.mine(difficulty)
-print("start:"+newBlock.bHash+":end")
+print("start:" + newBlock.current_hash + ":end")
