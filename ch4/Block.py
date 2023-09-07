@@ -2,14 +2,19 @@
 # From: Blockchain Tech Notes by P. G. Bradford
 #
 
-import datetime
+#import datetime
 import hashlib
+
+
+#
+#  from Block import Block
+#
 
 class Block:
     hashFunction = hashlib.new('sha256')
     current_hash = ""
     
-    def __init__(self,prevHash, data):
+    def __init__(self, prevHash, data):
         self.prevHash = prevHash
         self.data = data
         self.nonce = 0
