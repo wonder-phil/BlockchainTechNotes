@@ -1,9 +1,10 @@
 import datetime
 import hashlib
 import paho.mqtt.client as mqtt
-import time
 
-
+# global
+mydata = ""
+
 def on_message(client, userdata, message):
   global mydata
   print(message.topic + " " + message.payload.decode('utf-8'))
@@ -11,9 +12,7 @@ def on_message(client, userdata, message):
 
 client = mqtt.Client()
 client.connect("localhost", 1883)
-
-mydata = ""
-
+
 client.on_message = on_message
 client.subscribe("test",qos=1)
 

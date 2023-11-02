@@ -1,9 +1,7 @@
 import paho.mqtt.client as mqtt
-import time
-from Block import BlockMqtt
 
 client = mqtt.Client()
-client.connect("localhost", 1883)
+client.connect("localhost", 1883)# broker
 
 mydata = ""
 
