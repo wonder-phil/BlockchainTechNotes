@@ -1,23 +1,20 @@
 #
-# From https://pycryptodome.readthedocs.io/en/latest/src/examples.html
 #
 # 
-# pip3 install pycryptodome
+# > pip3 install rsa
+# > python3 key_gen.py 
 #
-# First Run python3 key_gen.py   
+# First generate these keys  
 #
-import crypto
-import sys
-sys.modules['Crypto'] = crypto
-from Crypto.PublicKey import RSA 
 
-key = RSA.generate(2048)
-private_key = key.exportKey()
-file_out = open("private.pem", "wb")
-file_out.write(private_key)
-file_out.close()
+import rsa
+(pub,sec) = rsa.newkeys(1024)
 
-public_key = key.publickey().exportKey()
-file_out = open("public.pem", "wb")
-file_out.write(public_key)
-file_out.close()
+pub_file = open("public-key.pem","w")
+sec_file = open("secret-key.pem","w")
+
+pub_file.write(pub.save_pkcs1().decode('utf-8'))
+sec_file.write(sec.save_pkcs1().decode('utf-8'))
+
+pub_file.close()
+sec_file.close()

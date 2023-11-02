@@ -2,7 +2,7 @@
 # From https://pycryptodome.readthedocs.io/en/latest/src/examples.html
 #
 # First run:  python3 key_gen.py  
-# Second run: puthon3 rsa_encrypt.py 
+# Second run: python3 rsa_encrypt.py 
 #  
 # 
 
