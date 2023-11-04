@@ -13,7 +13,6 @@ import paho.mqtt.client as mqtt
 mine = ""
 blockData = ""
 
-
 def on_message(client, userdata, message):
   global blockData
   global mine
@@ -26,21 +25,17 @@ def on_message(client, userdata, message):
   else:
     print(message.topic + " <unknown topic> says : " + message.payload.decode('utf-8'))
 
-
-
 client = mqtt.Client()
 client.connect("localhost", 1883)
 client.on_message = on_message
 client.subscribe("mine",qos=1)
 client.subscribe("blockData",qos=1)
 
-
 class BlockMqtt:
   hashFunction = ""
   bHash = ""
 
   def __init__(self,prevHash, data):
-
     global mine
     global blockData
 
@@ -64,7 +59,6 @@ class BlockMqtt:
   def mine(self,diff):
     global mine
     global blockData
-
     blockData = ""
 
     self.interrupted = False
@@ -95,4 +89,4 @@ class BlockMqtt:
     s = s + 'bHash: ' + self.bHash + '\n'
 
     return s
-
+    
