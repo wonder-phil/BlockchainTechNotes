@@ -1,4 +1,10 @@
-
+#
+#
+# From: "The Chains that bind us" by Phillip G Bradford
+#  https://github.com/wonder-phil/BlockchainTechNotes
+#      by P. G. Bradford
+#
+#
 import paho.mqtt.client as mqtt
 
 client = mqtt.Client()
@@ -13,7 +19,7 @@ def on_message(client, userdata, message):
   mydata = message.payload.decode('utf-8')
 
 client.on_message = on_message
-client.subscribe("test",qos=1)
+client.subscribe("break-event-loop",qos=1)
 client.loop_start()
 while True:
     if len(mydata) != 0:
