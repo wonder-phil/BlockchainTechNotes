@@ -35,6 +35,7 @@ def run_chain():
   client = mqtt.Client()
   client.connect("localhost", 1883)
   client.on_message = on_message
+  client.clean_run = True
   client.subscribe("mine",qos=1)
   client.subscribe("blockData",qos=1)
 
