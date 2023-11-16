@@ -8,6 +8,19 @@
 ## Some common gotchas
 
 1. Check
-2. 
-3. 
+2. Can't install paho.mqtt on a virtual RPi?  
+    Check if there is enough memory on the virtual RPi
+	 Rpi>  df -h
+	This should be at least 10 GB
+	If not, then ensure the IMG or qcow2 file was enlarged by at least 10GB using
+	  Ubuntu> qemu-img resize ...
+	  and the RPi OS is aware of the larger IMG or qcow2 file using
+	  RPi> sudo raspi-config
+
+3. Can't connet to the broker machine
+     Check that the broker machine has the /etc/mosquitto/mosquitto.conf updated with 
+	 allow_anonymous  true   # this is dangerous
+     listener 1883 
+	  
+4. All publish/subscribe clients must use the same broker.  Each machine has a single paho.mqtt broker.
 
