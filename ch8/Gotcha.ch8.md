@@ -7,6 +7,9 @@
 
 ## Some common gotchas
 
+0. Ensure you have network access to the RPis
+   Ubuntu> ping <Rpi IP address>
+
 1. Can't pub/sub on the same RPi?
      Ensure you did the following recently
 	 Rpi> sudo apt update 
@@ -23,7 +26,7 @@
 3. Can't connet to the broker machine
      Check that the broker machine has the /etc/mosquitto/mosquitto.conf updated with 
 	 allow_anonymous  true   # this is dangerous
-     listener 1883 
+     listener 1883 0.0.0.0   # you can whitelist machines
 	  
 4. All publish/subscribe clients must use the same broker.  Each machine has a single paho.mqtt broker.
 
