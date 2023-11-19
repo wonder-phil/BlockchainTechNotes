@@ -7,7 +7,10 @@
 
 ## Some common gotchas
 
-1. Check
+1. Can't pub/sub on the same RPi?
+     Ensure you did the following recently
+	 Rpi> sudo apt update 
+	 
 2. Can't install paho.mqtt on a virtual RPi?  
     Check if there is enough memory on the virtual RPi
 	 Rpi>  df -h
