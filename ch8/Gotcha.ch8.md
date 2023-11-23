@@ -9,12 +9,17 @@
 
 0. Ensure you have network access to the RPis
    Ubuntu> ping <Rpi IP address>
+   
+1. RPI_1_Mine() does not work
+   Check that hostname='<GUEST>' has an accessible '<GUEST>' by doing
+   Ubuntu> ping <GUEST>
+   Get correct <GUEST> address.
 
-1. Can't pub/sub on the same RPi?
+2. Can't pub/sub on the same RPi?
      Ensure you did the following recently
 	 Rpi> sudo apt update 
 	 
-2. Can't install paho.mqtt on a virtual RPi?  
+3. Can't install paho.mqtt on a virtual RPi?  
     Check if there is enough memory on the virtual RPi
 	 Rpi>  df -h
 	This should be at least 10 GB
@@ -22,11 +27,12 @@
 	  Ubuntu> qemu-img resize ...
 	  and the RPi OS is aware of the larger IMG or qcow2 file using
 	  RPi> sudo raspi-config
+	  Rpi> sudo reboot -h now
 
-3. Can't connet to the broker machine
+4. Can't connet to the broker machine
      Check that the broker machine has the /etc/mosquitto/mosquitto.conf updated with 
 	 allow_anonymous  true   # this is dangerous
      listener 1883 0.0.0.0   # you can whitelist machines
 	  
-4. All publish/subscribe clients must use the same broker.  Each machine has a single paho.mqtt broker.
+5. All publish/subscribe clients must use the same broker.  Beware, each machine has its own paho.mqtt broker.
 
