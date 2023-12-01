@@ -19,6 +19,17 @@
    the directory /home/rpi
    
     
-2. 
+2. LOC-of-DRIVER path issue: The Ubuntu graphics driver location may vary based on the virtualizer
+
+ <graphics type='spice' autoport='yes'>
+      <gl enable='no' rendernode='/dev/dri/by-path/pci-0000:00:02.0-render'/>
+    </graphics>
+	
+	The correct location can be found by connecting to the directory '/dev/dri/by-path/'
+	and tabbing-out with the escape-key or tab-key on some machines with `pic-00...'
+	This should give you the *entire* path NEW-PATH to put in the XML line:
+	
+	<gl enable='no' rendernode='NEW-PATH'/>
+	
 3. 
 
