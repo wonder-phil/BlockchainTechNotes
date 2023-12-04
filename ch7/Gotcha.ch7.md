@@ -31,5 +31,6 @@
 	
 	<gl enable='no' rendernode='NEW-PATH'/>
 	
-3. 
+3. Kernel panic-not syncing: VFS: block (0,0) - this means qemu cannot read the RPi's disk (IMG or qcow2 formats).
+
 
