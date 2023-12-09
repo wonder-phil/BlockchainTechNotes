@@ -4,7 +4,7 @@
 The functions here are standard and can be found in many places
 # 
 ## pip3 install hashlib
-## pip3 install pycryptodome
+## pip3 install rsa
 #
 #
 # Using the RSA code - 
